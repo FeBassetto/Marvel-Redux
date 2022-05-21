@@ -39,5 +39,7 @@ export const GlobalStyle = createGlobalStyle`
   `
 
 export const lightMode = {
-    background: '#e0e0e0'
+    background: '#e0e0e0',
+    backgroundHeader: '#bb2d2d',
+    shadowHeader: '#fd3838'
 }
