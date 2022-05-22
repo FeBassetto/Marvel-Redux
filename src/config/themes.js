@@ -40,21 +40,21 @@ export const GlobalStyle = createGlobalStyle`
 
 export const lightMode = {
     background: '#ffffff',
-    backgroundHeader: '#eb0c0c',
-    shadowHeader: '#ff0000',
-    colorHeader: '#ffffff'
+    backgroundPrimary: '#eb0c0c',
+    shadowPrimary: '#ff0000',
+    colorPrimary: '#ffffff'
 }
 
 export const darkMode = {
     background: '#e0e0e0',
-    backgroundHeader: '#000000',
-    shadowHeader: '#000000',
-    colorHeader: '#dfdfdf'
+    backgroundPrimary: '#000000',
+    shadowPrimary: '#000000',
+    colorPrimary: '#dfdfdf'
 }
 
 export const blueMode = {
     background: '#e0e0e0',
-    backgroundHeader: '#0000ff',
-    shadowHeader: '#0000ff',
-    colorHeader: '#ffffff'
+    backgroundPrimary: '#0000ff',
+    shadowPrimary: '#0000ff',
+    colorPrimary: '#ffffff'
 }

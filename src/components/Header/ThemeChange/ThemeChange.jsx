@@ -7,7 +7,7 @@ import { bindActionCreators } from 'redux'
 import { themeActions } from "../../../store/actions/themeAction";
 
 const StyledPalette = styled.div`
-    background-color: ${props => props.theme.backgroundHeader}
+    background-color: ${props => props.theme.backgroundPrimary}
 `
 
 const ThemeChange = (props) => {

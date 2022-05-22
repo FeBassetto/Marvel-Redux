@@ -6,16 +6,16 @@ import { MdFavorite } from 'react-icons/md'
 import ThemeChange from "./ThemeChange/ThemeChange";
 
 const StyledHeader = styled.header`
-    background-color: ${props => props.theme.backgroundHeader};
-    box-shadow: 0 0 1.5rem ${props => props.theme.shadowHeader};
+    background-color: ${props => props.theme.backgroundPrimary};
+    box-shadow: 0 0 1.5rem ${props => props.theme.shadowPrimary};
 `
 
 const StyledLogo = styled.div`
-    color: ${props => props.theme.colorHeader};
+    color: ${props => props.theme.colorPrimary};
 `
 
 const StyledIcons = styled.div`
-    color:${props => props.theme.colorHeader}
+    color:${props => props.theme.colorPrimary}
 `
 
 const DesktopHeader = () => {
