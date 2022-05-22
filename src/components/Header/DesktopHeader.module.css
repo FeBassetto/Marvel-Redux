@@ -12,9 +12,21 @@
 
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .header__logo{
     font-family: RobotoBold;
     font-size: 3vw;
+}
+
+.header__icons{
+    font-size: 2vw;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0 2rem;
+
+    height: 100%;
 }
