@@ -76,13 +76,13 @@
 .palette__dropdown___open {
     display: flex;
     bottom: -7rem;
-    animation: .5s linear openPalette;
+    animation: .3s linear openPalette;
 }
 
 @keyframes openPalette {
     0% {
         opacity: 0;
-        bottom: -4rem;
+        bottom: -6rem;
     }
 
     80% {

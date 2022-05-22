@@ -1,5 +1,5 @@
 import React from "react";
-import style from './DesktopHeader.module.css'
+import style from './Header.module.css'
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import { MdFavorite } from 'react-icons/md'

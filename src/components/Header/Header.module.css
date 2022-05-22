@@ -17,11 +17,13 @@
 
 .header__logo{
     font-family: RobotoBold;
-    font-size: 3vw;
+    font-size: 3rem;
+
+    margin-right: 12vw;
 }
 
 .header__icons{
-    font-size: 2vw;
+    font-size: 2rem;
 
     display: flex;
     flex-direction: row;

@@ -44,3 +44,17 @@ export const lightMode = {
     shadowHeader: '#fd3838',
     colorHeader: '#e0e0e0'
 }
+
+export const darkMode = {
+    background: '#e0e0e0',
+    backgroundHeader: '#bb2d2d',
+    shadowHeader: '#fd3838',
+    colorHeader: '#e0e0e0'
+}
+
+export const blueMode = {
+    background: '#e0e0e0',
+    backgroundHeader: '#bb2d2d',
+    shadowHeader: '#fd3838',
+    colorHeader: '#e0e0e0'
+}
