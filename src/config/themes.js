@@ -1,11 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
-import RobotoExtraBold from './assets/fonts/Roboto/Roboto-Black.ttf';
-import RobotoBold from './assets/fonts/Roboto/Roboto-Bold.ttf';
-import RobotoMedium from './assets/fonts/Roboto/Roboto-Medium.ttf';
-import RobotoRegular from './assets/fonts/Roboto/Roboto-Regular.ttf';
-import InterMedium from './assets/fonts/Inter/Inter-Medium.ttf';
-import InterLight from './assets/fonts/Inter/Inter-Light.ttf';
-import InterBold from './assets/fonts/Inter/Inter-Bold.ttf';
+import RobotoExtraBold from '../assets/fonts/Roboto/Roboto-Black.ttf';
+import RobotoBold from '../assets/fonts/Roboto/Roboto-Bold.ttf';
+import RobotoMedium from '../assets/fonts/Roboto/Roboto-Medium.ttf';
+import RobotoRegular from '../assets/fonts/Roboto/Roboto-Regular.ttf';
+import InterMedium from '../assets/fonts/Inter/Inter-Medium.ttf';
+import InterLight from '../assets/fonts/Inter/Inter-Light.ttf';
+import InterBold from '../assets/fonts/Inter/Inter-Bold.ttf';
 
 export const GlobalStyle = createGlobalStyle`
     @font-face{
@@ -39,22 +39,22 @@ export const GlobalStyle = createGlobalStyle`
   `
 
 export const lightMode = {
-    background: '#e0e0e0',
-    backgroundHeader: '#bb2d2d',
-    shadowHeader: '#fd3838',
-    colorHeader: '#e0e0e0'
+    background: '#ffffff',
+    backgroundHeader: '#eb0c0c',
+    shadowHeader: '#ff0000',
+    colorHeader: '#ffffff'
 }
 
 export const darkMode = {
     background: '#e0e0e0',
-    backgroundHeader: '#bb2d2d',
-    shadowHeader: '#fd3838',
-    colorHeader: '#e0e0e0'
+    backgroundHeader: '#000000',
+    shadowHeader: '#000000',
+    colorHeader: '#dfdfdf'
 }
 
 export const blueMode = {
     background: '#e0e0e0',
-    backgroundHeader: '#bb2d2d',
-    shadowHeader: '#fd3838',
-    colorHeader: '#e0e0e0'
+    backgroundHeader: '#0000ff',
+    shadowHeader: '#0000ff',
+    colorHeader: '#ffffff'
 }

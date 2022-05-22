@@ -7,7 +7,7 @@ import ThemeChange from "./ThemeChange/ThemeChange";
 
 const StyledHeader = styled.header`
     background-color: ${props => props.theme.backgroundHeader};
-    box-shadow: 0 0 1rem ${props => props.theme.shadowHeader};
+    box-shadow: 0 0 1.5rem ${props => props.theme.shadowHeader};
 `
 
 const StyledLogo = styled.div`

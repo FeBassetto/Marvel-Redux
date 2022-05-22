@@ -1,8 +1,8 @@
 import { Provider } from 'react-redux';
 import Routing from './Routing';
-import { GlobalStyle } from './themes';
 import store from './store/store';
 import ProviderTheme from './components/ProviderTheme/ProviderTheme';
+import { GlobalStyle } from './config/themes';
 
 function App() {
 

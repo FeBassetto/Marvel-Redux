@@ -12,8 +12,6 @@ const StyledPalette = styled.div`
 
 const ThemeChange = (props) => {
 
-    console.log(props)
-
     const [openPalette, setOpenPalette] = useState(false)
 
     function togglePalette() {
