@@ -19,6 +19,8 @@
 
 .palette__dropdown {
     position: absolute;
+
+    z-index: 99;
     
     border-radius: 20px;
 

@@ -1,13 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import { ThemeProvider } from 'styled-components';
-import { lightMode, darkMode, blueMode } from "../../config/themes";
+import { redMode, darkMode, blueMode } from "../../config/themes";
 
 
 const ProviderTheme = (props) => {
 
     const themes = {
-        white: lightMode,
+        red: redMode,
         black: darkMode,
         blue: blueMode
     }

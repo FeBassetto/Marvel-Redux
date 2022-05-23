@@ -38,23 +38,23 @@ export const GlobalStyle = createGlobalStyle`
     }
   `
 
-export const lightMode = {
-    background: '#ffffff',
+export const redMode = {
+    background: '#e0e0e0',
     backgroundPrimary: '#eb0c0c',
-    shadowPrimary: '#ff0000',
+    shadowPrimary: '#ffffff',
     colorPrimary: '#ffffff'
 }
 
 export const darkMode = {
     background: '#e0e0e0',
     backgroundPrimary: '#000000',
-    shadowPrimary: '#000000',
+    shadowPrimary: '#ffffff',
     colorPrimary: '#dfdfdf'
 }
 
 export const blueMode = {
     background: '#e0e0e0',
     backgroundPrimary: '#0000ff',
-    shadowPrimary: '#0000ff',
+    shadowPrimary: '#ffffff',
     colorPrimary: '#ffffff'
 }

@@ -40,8 +40,8 @@ const ThemeChange = (props) => {
                 <li
                     className={style.dropdown__white}
                     onClick={() => {
-                        if (props.theme !== 'white') {
-                            props.changeColor('white')
+                        if (props.theme !== 'red') {
+                            props.changeColor('red')
                             togglePalette()
                         }
                     }}

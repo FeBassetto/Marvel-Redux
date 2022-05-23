@@ -1,7 +1,7 @@
 import { Types } from './../actions/themeAction';
 
 const initialState = {
-    theme: 'white'
+    theme: 'red'
 }
 
 
