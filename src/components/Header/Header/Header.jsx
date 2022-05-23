@@ -8,7 +8,7 @@ import HeaderIcons from './../HeaderIcons/HeaderIcons';
 
 const StyledHeader = styled.header`
     background-color: ${props => props.theme.backgroundPrimary};
-    box-shadow: 0 0 1.5rem ${props => props.theme.shadowPrimary};
+    box-shadow: 0 0 .4rem ${props => props.theme.shadowPrimary};
 `
 
 const StyledLogo = styled.div`

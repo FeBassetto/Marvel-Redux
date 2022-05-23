@@ -39,22 +39,28 @@ export const GlobalStyle = createGlobalStyle`
   `
 
 export const redMode = {
-    background: '#e0e0e0',
-    backgroundPrimary: '#eb0c0c',
-    shadowPrimary: '#ffffff',
-    colorPrimary: '#ffffff'
+  background: '#e0e0e0',
+  backgroundPrimary: '#eb0c0c',
+  shadowPrimary: '#ffffff',
+  colorPrimary: '#ffffff',
+  backgroundSecondary: '#7a0000',
+  colorSecondary: '#d4d4d4'
 }
 
 export const darkMode = {
-    background: '#e0e0e0',
-    backgroundPrimary: '#000000',
-    shadowPrimary: '#ffffff',
-    colorPrimary: '#dfdfdf'
+  background: '#e0e0e0',
+  backgroundPrimary: '#000000',
+  shadowPrimary: '#ffffff',
+  colorPrimary: '#dfdfdf',
+  backgroundSecondary: '#1a1a1a',
+  colorSecondary: '#d4d4d4'
 }
 
 export const blueMode = {
-    background: '#e0e0e0',
-    backgroundPrimary: '#0000ff',
-    shadowPrimary: '#ffffff',
-    colorPrimary: '#ffffff'
+  background: '#e0e0e0',
+  backgroundPrimary: '#0000ff',
+  shadowPrimary: '#ffffff',
+  colorPrimary: '#ffffff',
+  backgroundSecondary: '#000052',
+  colorSecondary: '#d4d4d4'
 }

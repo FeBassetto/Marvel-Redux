@@ -17,13 +17,13 @@
 
     font-family: RobotoBold;
 
-    padding-bottom: .5rem;
+    height: 2vw;
 
     box-sizing: border-box;
 }
 
 .header__navigation ul li:hover{
-    border-bottom: 5px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
 }
 
 
