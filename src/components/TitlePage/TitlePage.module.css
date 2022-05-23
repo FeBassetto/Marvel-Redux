@@ -1,11 +1,11 @@
 .titlePage {
     width: 100%;
 
-    padding: 5vw;
+    padding: 0 5vw 3vw;
 
     box-sizing: border-box;
 
-    font-size: 7vw;
+    font-size: 8vw;
     font-family: RobotoBold;
     text-align: center;
 
@@ -19,7 +19,7 @@
 
 @media screen and (max-width:700px) {
     .titlePage{
-        padding: 15vw 2vw;
+        padding: 0vw 2vw 10vw;
         font-size: 10vw;
         line-height: 12vw;
     }

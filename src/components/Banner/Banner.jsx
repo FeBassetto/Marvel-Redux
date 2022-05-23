@@ -12,7 +12,7 @@ const Banner = () => {
                 className={style.banner__image}
             />
             <Link to='/' className={style.banner__link}>
-                <button>Veja os últimos heróis marvel</button>
+                <button>Veja lançamento Loki</button>
             </Link>
         </section>
     )
