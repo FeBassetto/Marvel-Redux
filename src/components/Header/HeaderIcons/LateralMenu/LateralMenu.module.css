@@ -1,0 +1,90 @@
+.icons__hamburger {
+    font-size: 2rem;
+    width: 40px;
+    height: 40px;
+}
+
+.lateralMenu {
+    position: fixed;
+    z-index: 55;
+    top: 0;
+    right: 0;
+    
+    
+    display: flex;
+    flex-direction: column;
+    
+    height: 100vh;
+    width: 80vw;
+    
+    box-shadow: 0 0 .3rem rgb(255, 255, 255);
+    animation: .5s linear openMenu;
+}
+
+@keyframes openMenu {
+    0% {
+        right: -80vw;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+.lateralMenu__closeIcon {
+    width: 100%;
+
+    padding: 1rem;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.lateralMenu__logo {
+    width: 100%;
+
+    padding: 1.5rem 0;
+
+    display: flex;
+    justify-content: center;
+
+    font-family: RobotoBold;
+}
+
+.lateralMenu__item {
+    width: 100%;
+    height: 5rem;
+
+    box-sizing: border-box;
+
+    border-top: solid 1px #ffffff;
+}
+
+.lateralMenu ul>*:last-child {
+    border-bottom: solid 1px #ffffff;
+}
+
+.lateralMenu__item a{
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 2rem;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 1.5rem;
+    font-family: InterLight;
+}
+
+@media screen and (min-width:1024px) {
+    .icons__hamburger {
+        display: none;
+    }
+
+    .lateralMenu{
+        display: none;
+    }
+}

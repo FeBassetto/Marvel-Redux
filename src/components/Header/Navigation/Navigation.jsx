@@ -1,32 +1,14 @@
 import React from "react";
-import style from './DesktopHeader.module.css'
-import styled from 'styled-components';
+import style from './Navigation.module.css'
+import styled from 'styled-components'
 import { Link } from "react-router-dom";
-import HeaderIcons from "../HeaderIcons/HeaderIcons";
-
-
-const StyledHeader = styled.header`
-    background-color: ${props => props.theme.backgroundPrimary};
-    box-shadow: 0 0 1.5rem ${props => props.theme.shadowPrimary};
-`
-
-const StyledLogo = styled.div`
-    color: ${props => props.theme.colorPrimary};
-`
 
 const StyledNavigation = styled.nav`
     color: ${props => props.theme.colorPrimary}
 `
 
-const DesktopHeader = () => {
+const DesktopNavigation = () => {
     return (
-        <StyledHeader className={style.header}>
-            <StyledLogo className={style.header__logo}>
-                <Link to='/'>
-                    MARVEL HEROES
-                </Link>
-            </StyledLogo>
-
             <StyledNavigation className={style.header__navigation}>
                 <ul>
                     <li className={style.navigation__item}>
@@ -51,11 +33,7 @@ const DesktopHeader = () => {
                     </li>
                 </ul>
             </StyledNavigation>
-
-            <HeaderIcons />
-
-        </StyledHeader>
     )
 }
 
-export default DesktopHeader
+export default DesktopNavigation

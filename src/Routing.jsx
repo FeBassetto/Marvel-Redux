@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Container from "./components/Container/Container";
-import Header from "./components/Header/Header";
 import Home from './pages/Home';
+import Header from './components/Header/Header/Header';
 
 
 const Routing = () => {

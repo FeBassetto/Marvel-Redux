@@ -1,0 +1,48 @@
+.header {
+    height: 10rem;
+    width: 100%;
+
+    padding: 0 2rem;
+
+    box-sizing: border-box;
+
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header__logo {
+    font-family: RobotoBold;
+    font-size: 3vw;
+
+    text-align: left;
+
+    width: 40%;
+}
+
+@media screen and (max-width:1023px) {
+    .header {
+        padding: 0 2rem;
+    }
+
+    .header__logo{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width:600px){
+    .logo__desktop{
+        display: none;
+    }
+}
+
+@media screen and (min-width:600px){
+    .logo__mobile{
+        display: none;
+    }
+}

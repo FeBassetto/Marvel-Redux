@@ -10,7 +10,7 @@
 }
 
 .palette__icon{
-    z-index: 99;
+    z-index: 52;
 }
 
 .palette__icon:hover {
@@ -20,7 +20,7 @@
 .palette__dropdown {
     position: absolute;
 
-    z-index: 99;
+    z-index: 51;
     
     border-radius: 20px;
 
