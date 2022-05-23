@@ -12,9 +12,9 @@ const DesktopFooter = () => {
                 <nav className={style.desktopFooter__navigation}>
                     <ul>
                         <li className={style.desktopNavigation__item}><Link to='/'>Home</Link></li>
-                        <li className={style.desktopNavigation__item}><Link to='/'>Heróis</Link></li>
-                        <li className={style.desktopNavigation__item}><Link to='/'>Quadrinhos</Link></li>
-                        <li><Link to='/'>Séries</Link></li>
+                        <li className={style.desktopNavigation__item}><Link to='/heroes'>Heróis</Link></li>
+                        <li className={style.desktopNavigation__item}><Link to='/comics'>Quadrinhos</Link></li>
+                        <li><Link to='/series'>Séries</Link></li>
                     </ul>
                 </nav>
             </div>
