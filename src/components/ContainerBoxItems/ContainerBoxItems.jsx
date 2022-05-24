@@ -39,8 +39,15 @@ const ContainerBoxItems = (props) => {
                         </div>
                     </div>
                     <StyledBox className={style.containerBox__bottom}>
-                        <h1>{content.name}</h1>
-                        <p>{content.description ? content.description : 'Este personagem não tem descrição'}</p>
+                        <h1>{content.name ? content.name : content.title}</h1>
+                        <p>{
+                            content.description ? content.description.length > 149 ?
+                                content.description.substring(0, 150).padEnd(156, '.')
+                                :
+                                content.description
+
+                                : 'Não contém descrição'
+                        }</p>
                         <Link to={`/heroes/${content.id}`}>
                             <StyledButton>Veja Mais</StyledButton>
                         </Link>
@@ -51,6 +58,6 @@ const ContainerBoxItems = (props) => {
     )
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators(favoriteActions,dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators(favoriteActions, dispatch)
 
 export default connect(null, mapDispatchToProps)(ContainerBoxItems)

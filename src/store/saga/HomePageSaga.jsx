@@ -26,13 +26,42 @@ function* requestInfo() {
             }
         )
 
+        const comics = yield call(
+            api.get,
+            '/comics',
+            {
+                params: {
+                    ...apiKey,
+                    limit: 8,
+                    offset: 0,
+                    orderBy: '-modified'
+                }
+            }
+        )
+
+        const series = yield call(
+            api.get,
+            '/series',
+            {
+                params: {
+                    ...apiKey,
+                    limit: 8,
+                    offset: 0,
+                    orderBy: '-modified'
+                }
+            }
+        )
+
+
         yield put(homePageActions.addHeroes(lastHeroes.data.data.results))
+        yield put(homePageActions.addComics(comics.data.data.results))
+        yield put(homePageActions.addSeries(series.data.data.results))
 
     } else {
 
         const favorites = yield select(state => state.favoriteReducer.favoriteItems)
 
-        yield put(homePageActions.updateHeroes(favorites))
+        yield put(homePageActions.updateHomePage(favorites))
     }
 
 }

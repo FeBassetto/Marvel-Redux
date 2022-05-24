@@ -1,0 +1,24 @@
+.loading{
+    width: 100%;
+    height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 8vw;
+}
+
+.loading svg{
+    animation: 1s infinite loading;
+}
+
+@keyframes loading{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}

@@ -12,13 +12,26 @@ export default function HomePage(state = initialState, action) {
         case Types.ADD_HEROES:
             return {
                 ...state,
-                lastHeroes: returnFavorites(action.payload.heroes),
+                lastHeroes: returnFavorites(action.payload.heroes, 'hero'),
                 loading: false
             }
-        case Types.UPDATE_HEROES:
+        case Types.ADD_COMICS:
             return {
                 ...state,
+                lastComics: returnFavorites(action.payload.comics, 'comic'),
+                loading: false
+            }
+        case Types.ADD_SERIES:
+            return {
+                ...state,
+                lastSeries: returnFavorites(action.payload.series, 'serie'),
+                loading: false
+            }
+        case Types.UPDATE_HOMEPAGE:
+            return {
                 lastHeroes: verifyFavorites(state.lastHeroes, action.payload.favorites),
+                lastComics: verifyFavorites(state.lastComics, action.payload.favorites),
+                lastSeries: verifyFavorites(state.lastSeries, action.payload.favorites),
                 loading: false
             }
         case Types.LOADING_HOMEPAGE:
@@ -33,24 +46,24 @@ export default function HomePage(state = initialState, action) {
 
 //Helpers
 
-function returnFavorites(heroes) {
+function returnFavorites(contents, type) {
     let data = []
 
-    heroes.map(hero => {
-        data = [...data, { ...hero, favorited: false }]
+    contents.map(content => {
+        data = [...data, { ...content, favorited: false, type: type}]
     })
 
     return data
 }
 
-function verifyFavorites(heroes, favorites) {
+function verifyFavorites(contents, favorites) {
     let data = []
 
-    heroes.map(hero => {
-        if (favorites.find(favorite => favorite.id === hero.id)) {
-            data = [...data, { ...hero, favorited: true }]
+    contents.map(content => {
+        if (favorites.find(favorite => favorite.id === content.id)) {
+            data = [...data, { ...content, favorited: true }]
         } else {
-            data = [...data, { ...hero, favorited: false }]
+            data = [...data, { ...content, favorited: false }]
         }
 
     })
