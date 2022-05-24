@@ -1,7 +1,7 @@
 import React from "react";
 import Banner from "../components/Banner/Banner";
-import LastHeroes from "../components/LastHeroes/LastHeroes";
 import TitlePage from "../components/TitlePage/TitlePage";
+import HomePageContent from '../components/HomePageContent/HomePageContent';
 
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
         <>
             <TitlePage firstText='Descubra mais sobre o universo' span='Marvel'/>
             <Banner/>
-            <LastHeroes/>
+            <HomePageContent/>
         </>
     )
 }

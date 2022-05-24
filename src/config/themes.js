@@ -39,7 +39,7 @@ export const GlobalStyle = createGlobalStyle`
   `
 
 export const redMode = {
-  background: '#e0e0e0',
+  background: '#ffffff',
   backgroundPrimary: '#eb0c0c',
   shadowPrimary: '#ffffff',
   colorPrimary: '#ffffff',
@@ -57,7 +57,7 @@ export const darkMode = {
 }
 
 export const blueMode = {
-  background: '#e0e0e0',
+  background: '#ffffff',
   backgroundPrimary: '#0000ff',
   shadowPrimary: '#ffffff',
   colorPrimary: '#ffffff',
