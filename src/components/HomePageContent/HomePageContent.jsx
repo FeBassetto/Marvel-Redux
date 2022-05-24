@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
 import { homePageActions } from "../../store/actions/homePageAction";
 import Loading from "../Loading/Loading";
+import style from './HomePageContent.module.css'
 
 
 const HomePageContent = (props) => {
@@ -19,7 +20,7 @@ const HomePageContent = (props) => {
     return (
         <>
             {!props.loading && (
-                <section>
+                <section className={style.homePageContent}>
                     <TitleSection text='Últimos heróis modificados' />
                     <ContainerBoxItems contents={props.characters} />
                     <TitleSection text='Últimos quadrinhos modificados' />

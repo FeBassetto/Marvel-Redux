@@ -1,5 +1,5 @@
 .header {
-    height: 10rem;
+    height: 10vw;
     width: 100%;
 
     padding: 0 2rem;
@@ -28,6 +28,7 @@
 @media screen and (max-width:1023px) {
     .header {
         padding: 0 2rem;
+        height: 10rem;
     }
 
     .header__logo{

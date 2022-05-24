@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
 
-    height: 100%;
+    height: 10vw;
 
 }
 
@@ -65,12 +65,12 @@
 .palette__dropdown___closed {
     display: block;
     animation: .1s linear closePalette;
-    top: -100%;
+    top: -100vh;
 }
 
 @keyframes closePalette {
     0% {
-        bottom: -6.5rem;
+        bottom: -6rem;
         visibility: 1;
     }
 
@@ -82,14 +82,14 @@
 
 .palette__dropdown___open {
     display: flex;
-    bottom: -6.5rem;
+    bottom: -6rem;
     animation: .3s linear openPalette;
 }
 
 @keyframes openPalette {
     0% {
         opacity: 0;
-        bottom: -6rem;
+        bottom: -5.5rem;
     }
 
     80% {
@@ -98,6 +98,146 @@
 
     100% {
         opacity: 1;
-        bottom: -6.5rem;
+        bottom: -6rem;
+    }
+}
+
+@media screen and (min-width:2150px){
+
+    .palette__dropdown___open {
+        bottom: -5rem;
+    }
+
+    @keyframes openPalette {
+        0% {
+            opacity: 0;
+            bottom: -4.5rem;
+        }
+    
+        80% {
+            opacity: .4;
+        }
+    
+        100% {
+            opacity: 1;
+            bottom: -5rem;
+        }
+    }
+
+    @keyframes closePalette {
+        0% {
+            bottom: -5rem;
+            visibility: 1;
+        }
+    
+        100%{
+            bottom: 0;
+            visibility: 0;
+        }
+    }
+}
+
+@media screen and (max-width:1600px){
+
+    .palette__dropdown___open {
+        bottom: -7.5rem;
+    }
+
+    @keyframes openPalette {
+        0% {
+            opacity: 0;
+            bottom: -6rem;
+        }
+    
+        80% {
+            opacity: .4;
+        }
+    
+        100% {
+            opacity: 1;
+            bottom: -7.5rem;
+        }
+    }
+
+    @keyframes closePalette {
+        0% {
+            bottom: -7.5rem;
+            visibility: 1;
+        }
+    
+        100%{
+            bottom: 0;
+            visibility: 0;
+        }
+    }
+}
+
+@media screen and (max-width:1023px){
+
+    .palette__dropdown___open {
+        bottom: -9rem;
+    }
+
+    @keyframes openPalette {
+        0% {
+            opacity: 0;
+            bottom: -8.5rem;
+        }
+    
+        80% {
+            opacity: .4;
+        }
+    
+        100% {
+            opacity: 1;
+            bottom: -9rem;
+        }
+    }
+
+    @keyframes closePalette {
+        0% {
+            bottom: -9rem;
+            visibility: 1;
+        }
+    
+        100%{
+            bottom: 0;
+            visibility: 0;
+        }
+    }
+}
+
+@media screen and (max-width:750px){
+
+    .palette__dropdown___open {
+        bottom: -10rem;
+    }
+
+    @keyframes openPalette {
+        0% {
+            opacity: 0;
+            bottom: -9.5rem;
+        }
+    
+        80% {
+            opacity: .4;
+        }
+    
+        100% {
+            opacity: 1;
+            bottom: -10rem;
+        }
+    }
+
+    @keyframes closePalette {
+        0% {
+            bottom: -10rem;
+            visibility: 1;
+        }
+    
+        100%{
+            bottom: 0;
+            visibility: 0;
+        }
     }
 }

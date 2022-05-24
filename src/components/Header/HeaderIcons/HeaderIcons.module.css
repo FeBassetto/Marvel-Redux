@@ -1,7 +1,7 @@
 .header__icons {
     width: 20%;
 
-    font-size: 2rem;
+    font-size: 2vw;
 
     display: flex;
     flex-direction: row;
@@ -15,5 +15,11 @@
 @media screen and (max-width:1023px) {
     .header__icons {
         width: 100%;
+    }
+}
+
+@media screen and (max-width:1023px) {
+    .header__icons{
+        font-size: 2rem;
     }
 }

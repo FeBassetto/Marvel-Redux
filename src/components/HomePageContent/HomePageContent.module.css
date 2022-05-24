@@ -1,0 +1,3 @@
+.homePageContent > *:nth-child(odd){
+    margin-top: 4rem;
+}

@@ -8,7 +8,7 @@ export default function favoriteReducer(state = initialState, action) {
     switch (action.type) {
         case Types.ADD_FAVORITE:
             return {
-                favoriteItems: [...state.favoriteItems, { ...action.payload.item}]
+                favoriteItems: [...state.favoriteItems, { ...action.payload.item, favorited: true }]
             }
         case Types.REMOVE_FAVORITE:
             return {
