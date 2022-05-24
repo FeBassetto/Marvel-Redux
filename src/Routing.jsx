@@ -4,18 +4,20 @@ import Container from "./components/Container/Container";
 import Home from './pages/Home';
 import Header from './components/Header/Header/Header';
 import Footer from './components/Footer/Footer';
+import Favorites from "./pages/Favorites";
 
 
 const Routing = () => {
     return (
         <Router>
-        <Header/>
+            <Header />
             <Container>
                 <Routes>
                     <Route exact path='/' element={<Home />} />
+                    <Route path='favorites' element={<Favorites />} />
                 </Routes>
             </Container>
-            <Footer/>
+            <Footer />
         </Router>
     )
 }

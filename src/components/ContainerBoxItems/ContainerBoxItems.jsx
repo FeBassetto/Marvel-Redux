@@ -28,7 +28,7 @@ const ContainerBoxItems = (props) => {
                     <div className={style.containerBox__top}>
                         <img
                             src={`${content.thumbnail.path}.${content.thumbnail.extension}`}
-                            alt={content.name}
+                            alt={content.name ? content.name : content.title}
                             className={style.containerBox__image}
                         />
                         <div className={style.containerBox__favorite}>

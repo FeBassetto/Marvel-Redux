@@ -45,7 +45,7 @@ const mapStateToProps = state => ({
     comics: state.HomePage.lastComics,
     series: state.HomePage.lastSeries,
     loading: state.HomePage.loading,
-    favorites: state.favoriteReducer.favoriteItems,
+    favorites: state.favoriteReducer.favoriteItems
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePageContent)
