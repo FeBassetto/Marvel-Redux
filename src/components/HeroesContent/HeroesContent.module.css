@@ -1,0 +1,22 @@
+.heroesContent{
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+
+    padding-top: 2rem;
+}
+
+.containerHeroes{
+    width: 85%;
+}
+
+@media screen and (max-width:1300px){
+    .heroesContent{
+        flex-direction: column;
+    }   
+
+    .containerHeroes{
+        width: 100%;
+    }
+}

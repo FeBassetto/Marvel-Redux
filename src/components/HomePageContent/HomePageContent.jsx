@@ -22,11 +22,11 @@ const HomePageContent = (props) => {
             {!props.loading && (
                 <section className={style.homePageContent}>
                     <TitleSection text='Últimos heróis modificados' />
-                    <ContainerBoxItems contents={props.characters} />
-                    <TitleSection text='Últimos quadrinhos modificados' />
-                    <ContainerBoxItems contents={props.comics} />
+                    <ContainerBoxItems contents={props.characters} link='/heroes' />
+                    <TitleSection text='Últimos quadrinhos modificados'  />
+                    <ContainerBoxItems contents={props.comics} link='/comics' />
                     <TitleSection text='Últimas séries modificados' />
-                    <ContainerBoxItems contents={props.series} />
+                    <ContainerBoxItems contents={props.series} link='/series' />
                 </section>
             )}
 

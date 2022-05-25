@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Header from './components/Header/Header/Header';
 import Footer from './components/Footer/Footer';
 import Favorites from "./pages/Favorites";
+import Heroes from './pages/Heroes';
 
 
 const Routing = () => {
@@ -14,7 +15,8 @@ const Routing = () => {
             <Container>
                 <Routes>
                     <Route exact path='/' element={<Home />} />
-                    <Route path='favorites' element={<Favorites />} />
+                    <Route path='/favorites' element={<Favorites />} />
+                    <Route path="/heroes" element={<Heroes/>} />
                 </Routes>
             </Container>
             <Footer />

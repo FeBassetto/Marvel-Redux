@@ -1,0 +1,139 @@
+.filter {
+    width: 25%;
+
+    padding: 2rem 0;
+
+    box-sizing: border-box;
+
+    border-radius: 0px 20px 20px 0px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 3rem;
+}
+
+.filter__firstTitle {
+    font-size: 2vw;
+    font-family: InterBold;
+
+    text-transform: uppercase;
+
+    width: 100%;
+    padding: 1rem;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid #808080;
+}
+
+.filter__container{
+    width: 100%;
+
+    padding: 1rem;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    gap: 1rem;
+}
+
+.container__secondTitle{
+    font-size: 1.75vw;
+    font-family: InterMedium;
+}
+
+.container__checkbox{
+    display: flex;
+
+    align-items: center;
+    gap: 0 1rem;
+
+    font-size: 1.2vw;
+    font-family: InterMedium;
+}
+
+.container__checkbox input{
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+.container__checkbox input:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width:1300px){
+    .filter{
+        width: 100%;
+        flex-flow: row wrap;
+
+        margin-bottom: 2rem;
+
+        gap: 1rem;
+
+        border-bottom: 1px solid #808080;
+    }
+
+    .filter__container{
+        width: 45%;
+
+        flex-flow: row wrap;
+
+        box-sizing: border-box;
+    }
+
+    .container__secondTitle{
+        width: 100%;
+    }
+
+    .container__checkbox{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width:1023px){
+    .filter__container{
+        flex-flow: column nowrap;
+    }
+
+    .filter__firstTitle{
+        font-size: 2rem;
+    }
+
+    .container__secondTitle{
+        font-size: 1.5rem;
+    }
+
+    .container__checkbox{
+        font-size: 1rem;
+    }
+
+    .container__checkbox input{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+@media screen and (max-width:425px){
+    .filter__firstTitle{
+        font-size: 2rem;
+    }
+
+    .container__secondTitle{
+        font-size: 1.25rem;
+    }
+
+    .container__checkbox{
+        font-size: .75rem;
+    }
+
+    .container__checkbox input{
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
