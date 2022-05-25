@@ -48,7 +48,7 @@ const ContainerBoxItems = (props) => {
 
                                 : 'Não contém descrição'
                         }</p>
-                        <Link to={`${props.link}/${content.id}`}>
+                        <Link to={props.link ? `${props.link}/${content.id}` : `${content.id}`}>
                             <StyledButton>Veja Mais</StyledButton>
                         </Link>
                     </StyledBox>

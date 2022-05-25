@@ -57,6 +57,10 @@ function* requestInfo() {
         yield put(homePageActions.addComics(comics.data.data.results))
         yield put(homePageActions.addSeries(series.data.data.results))
 
+        const favorites = yield select(state => state.favoriteReducer.favoriteItems)
+
+        yield put(homePageActions.updateHomePage(favorites))
+
     } else {
 
         const favorites = yield select(state => state.favoriteReducer.favoriteItems)

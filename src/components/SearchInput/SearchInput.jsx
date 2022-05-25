@@ -6,6 +6,7 @@ import styled from 'styled-components';
 const StyledInput = styled.div`
     background-color:${props => props.theme.backgroundSecondary};
     color:${props => props.theme.colorPrimary};
+    border: .3rem solid ${props => props.theme.backgroundPrimary};
 `
 
 const SearchInput = (props) => {

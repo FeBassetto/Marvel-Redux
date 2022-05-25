@@ -1,17 +1,30 @@
 import React from "react";
-import HeroesContent from "../components/HeroesContent/HeroesContent";
+import HeroesContent from "../components/DataContent/DataContent";
 import TitlePage from "../components/TitlePage/TitlePage";
 import SearchInput from './../components/SearchInput/SearchInput';
+import { connect } from "react-redux";
 
 
-const Heroes = () => {
-    return(
+const Heroes = (props) => {
+    return (
         <>
             <TitlePage firstText='Pesquise seus' span='Heróis' secondText='favoritos' />
-            <SearchInput placeHolder='Pesquise um herói'/>
-            <HeroesContent/>
+            <SearchInput placeHolder='Pesquise um herói' />
+            <HeroesContent
+                data={props.characters}
+                filter='Nome'
+                nameCronic={false}
+                nameAlf={false}
+                modifiedDec={false}
+                modifiedCre={false}
+                offset={3}
+            />
         </>
     )
 }
 
-export default Heroes
+const mapStateToProps = state => ({
+    characters: state.HomePage.lastHeroes
+})
+
+export default connect(mapStateToProps, null)(Heroes)
