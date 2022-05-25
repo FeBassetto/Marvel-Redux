@@ -1,6 +1,6 @@
 .heroesContent{
     display: flex;
-    flex-direction: row;
+    flex-flow: row nowrap;
 
     width: 100%;
 
