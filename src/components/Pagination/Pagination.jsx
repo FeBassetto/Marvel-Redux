@@ -2,31 +2,62 @@ import React from "react";
 import style from './Pagination.module.css'
 
 
-const Pagination = ({ offset }) => {
+const Pagination = ({ offset, limit }) => {
 
-    const initialPagination = [1, 2, 3, 4, 5]
-    const customPagination = [offset - 2, offset - 1, offset, offset + 1, offset + 2]
+    const limitPages = Math.ceil(limit / 8)
+
+    const lessPages = []
+
+    for (let i = 1; i <= limitPages; i++) {
+        lessPages.push(i)
+    }
+
+    const sliced = offset - 2 > 0 && offset + 2 <= limitPages && lessPages.slice(offset - 3, offset + 2)
+
+    const min = offset - 2 < 1 && [1, 2, 3, 4, 5]
+
+    const max = offset + 2 > limitPages && lessPages.slice(
+        offset - 3 - (offset + 2 - limitPages),
+        offset + (2 - (offset + 2 - limitPages))
+    )
+
+    const activeBox = (box) => {
+        if (box === offset) return (
+            <div className={`${style.box} ${style.box___active}`}>
+                {box}
+            </div>
+        )
+        return (
+            <div className={`${style.box}`}>
+                {box}
+            </div>
+        )
+    }
 
     return (
         <div className={style.paginationContainer}>
-            {offset < 3 ? (
+            {limitPages <= 5 && (
+                lessPages.map(box => {
+                    return activeBox(box)
+                })
+            )
+            }
+
+            {limitPages > 5 && (
                 <>
-                    {initialPagination.map(box => {
-                        if (box === offset) return (<div className={`${style.box___active} ${style.box}`}>{box}</div>)
-                        return (<div className={style.box}>{box}</div>)
+                    {max && max.map(box => {
+                        return activeBox(box)
+                    })}
+
+                    {min && min.map(box => {
+                        return activeBox(box)
+                    })}
+
+                    {sliced && sliced.map(box => {
+                        return activeBox(box)
                     })}
                 </>
-            )
-                :
-                (
-                    <>
-                        {customPagination.map(box => {
-                            if (box === offset) return (<div className={`${style.box___active} ${style.box}`}>{box}</div>)
-                            return (<div className={style.box}>{box}</div>)
-                        })}
-                    </>
-                )
-            }
+            )}
         </div>
     )
 }

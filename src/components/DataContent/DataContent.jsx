@@ -17,19 +17,21 @@ const DataContent = (props) => {
                 modifiedCre={props.modifiedCre}
             />
 
-            <div className={style.containerData}>
-                {props.data.length > 0 ?
-                    <ContainerBoxItems
-                        contents={props.data}
-                        link={''}
-                    />
-                    :
+            {props.data.length > 0 ?
+                <div className={style.containerData}>
                     <>
-                        <Loading />
+                        <ContainerBoxItems
+                            contents={props.data}
+                            link={''}
+                        />
+                        <Pagination offset={props.offset} limit={props.limit} />
                     </>
-                }
-                <Pagination offset={props.offset} />
-            </div>
+                </div>
+                :
+                <>
+                    <Loading />
+                </>
+            }
 
         </section>
     )

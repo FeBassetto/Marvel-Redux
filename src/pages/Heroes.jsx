@@ -17,7 +17,8 @@ const Heroes = (props) => {
                 nameAlf={false}
                 modifiedDec={false}
                 modifiedCre={false}
-                offset={3}
+                offset={1}
+                limit={90}
             />
         </>
     )
