@@ -25,6 +25,7 @@ const Pagination = ({ offset, limit, setOffset }) => {
         if (limitPages > 1) {
             if (box === offset) return (
                 <div
+                    key={box}
                     className={`${style.box} ${style.box___active}`}
                     onClick={() => setOffset(box)}
                 >
@@ -33,6 +34,7 @@ const Pagination = ({ offset, limit, setOffset }) => {
             )
             return (
                 <div
+                    key={box}
                     className={`${style.box}`}
                     onClick={() => setOffset(box)}
                 >

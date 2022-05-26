@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Favorites from "./pages/Favorites";
 import Heroes from './pages/Heroes';
 import Comics from "./pages/Comics";
+import Series from './pages/Series';
 
 
 const Routing = () => {
@@ -19,6 +20,7 @@ const Routing = () => {
                     <Route path='/favorites' element={<Favorites />} />
                     <Route path="/heroes" element={<Heroes />} />
                     <Route path='/comics' element={<Comics />} />
+                    <Route path='/series' element={<Series />} />
                 </Routes>
             </Container>
             <Footer />
