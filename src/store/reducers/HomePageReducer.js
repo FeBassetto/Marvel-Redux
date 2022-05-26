@@ -1,4 +1,5 @@
 import { Types } from "../actions/homePageAction"
+import { returnFavorites, verifyFavorites } from './../helpers/helpers';
 
 const initialState = {
     lastHeroes: [],
@@ -44,29 +45,3 @@ export default function HomePage(state = initialState, action) {
     }
 }
 
-//Helpers
-
-function returnFavorites(contents, type) {
-    let data = []
-
-    contents.map(content => {
-        data = [...data, { ...content, favorited: false, type: type}]
-    })
-
-    return data
-}
-
-function verifyFavorites(contents, favorites) {
-    let data = []
-
-    contents.map(content => {
-        if (favorites.find(favorite => favorite.id === content.id)) {
-            data = [...data, { ...content, favorited: true }]
-        } else {
-            data = [...data, { ...content, favorited: false }]
-        }
-
-    })
-
-    return data
-}

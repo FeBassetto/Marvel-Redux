@@ -2,7 +2,7 @@ import React from "react";
 import style from './Pagination.module.css'
 
 
-const Pagination = ({ offset, limit }) => {
+const Pagination = ({ offset, limit, setOffset }) => {
 
     const limitPages = Math.ceil(limit / 8)
 
@@ -22,17 +22,29 @@ const Pagination = ({ offset, limit }) => {
     )
 
     const activeBox = (box) => {
-        if (box === offset) return (
-            <div className={`${style.box} ${style.box___active}`}>
-                {box}
-            </div>
-        )
-        return (
-            <div className={`${style.box}`}>
-                {box}
-            </div>
-        )
+        if (limitPages > 1) {
+            if (box === offset) return (
+                <div
+                    className={`${style.box} ${style.box___active}`}
+                    onClick={() => setOffset(box)}
+                >
+                    {box}
+                </div>
+            )
+            return (
+                <div
+                    className={`${style.box}`}
+                    onClick={() => setOffset(box)}
+                >
+                    {box}
+                </div>
+            )
+        } else {
+            return (<></>)
+        }
     }
+
+    //React
 
     return (
         <div className={style.paginationContainer}>

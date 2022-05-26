@@ -15,23 +15,28 @@ const DataContent = (props) => {
                 nameAlf={props.nameAlf}
                 modifiedDec={props.modifiedDec}
                 modifiedCre={props.modifiedCre}
+                setSelect={props.setSelect}
             />
 
-            {props.data.length > 0 ?
                 <div className={style.containerData}>
                     <>
+            {!props.loading ?
                         <ContainerBoxItems
                             contents={props.data}
                             link={''}
                         />
-                        <Pagination offset={props.offset} limit={props.limit} />
-                    </>
-                </div>
                 :
                 <>
                     <Loading />
                 </>
             }
+                        <Pagination
+                            offset={props.offset}
+                            limit={props.limit}
+                            setOffset={props.setOffset}
+                        />
+                    </>
+                </div>
 
         </section>
     )

@@ -1,6 +1,6 @@
 export const Types = {
-    ADD_FAVORITE: 'favorite/ADD_FAVORITE',
-    REMOVE_FAVORITE: 'favorite/REMOVE_FAVORITE'
+    ADD_FAVORITE: 'favorites/ADD_FAVORITE',
+    REMOVE_FAVORITE: 'favorites/REMOVE_FAVORITE'
 }
 
 

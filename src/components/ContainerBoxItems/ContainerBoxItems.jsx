@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md'
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { favoriteActions } from "../../store/actions/favoritesActions";
+import { favoriteActions } from "../../store/actions/favoritesAction";
 
 const StyledBox = styled.div`
     background-color: ${props => props.theme.colorPrimary};

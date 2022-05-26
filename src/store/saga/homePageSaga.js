@@ -70,6 +70,6 @@ function* requestInfo() {
 
 }
 
-export default all([
-    takeLatest(Types.REQUEST_INFO, requestInfo)
-])
+export default function* requestHomePageSaga() {
+    yield takeLatest(Types.REQUEST_INFO, requestInfo)
+}

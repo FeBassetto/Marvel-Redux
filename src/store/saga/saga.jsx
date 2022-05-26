@@ -1,9 +1,11 @@
-import {all} from 'redux-saga/effects'
+import {all, fork} from 'redux-saga/effects'
 
-import HomePageSaga from './HomePageSaga'
+import HomePageSaga from './homePageSaga'
+import heroesSaga from './heroesSaga'
 
 export default function* saga(){
-    return yield all([
-        HomePageSaga
+    yield all([
+        fork(HomePageSaga),
+        fork(heroesSaga)
     ])
 }

@@ -1,4 +1,4 @@
-import { Types } from "../actions/favoritesActions"
+import { Types } from "../actions/favoritesAction"
 
 const initialState = {
     favoriteItems: []

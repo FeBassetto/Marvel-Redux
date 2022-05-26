@@ -2,7 +2,7 @@ import React from "react";
 import style from './FavoriteBoxItems.module.css';
 import { BsTrash } from 'react-icons/bs'
 import { bindActionCreators } from 'redux';
-import { favoriteActions } from "../../../store/actions/favoritesActions";
+import { favoriteActions } from "../../../store/actions/favoritesAction";
 import { connect } from "react-redux";
 
 const FavoriteBoxItems = (props) => {

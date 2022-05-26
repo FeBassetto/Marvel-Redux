@@ -11,11 +11,30 @@ const StyledInput = styled.div`
 
 const SearchInput = (props) => {
 
+    const [searchValue, setSearchValue] = useState('')
+    let timeout = null;
+
     const activateInput = (e) => {
         e.target.parentNode.firstChild.focus()
     }
 
-    const [searchValue, setSearchValue] = useState('')
+    function debounceNameStarts(value) {
+
+        clearTimeout(timeout);
+
+        timeout = setTimeout(function () {
+            props.setNameStarts(value)
+        }, 2000);
+
+    }
+
+    function noDebounceNameStarts() {
+
+        props.setNameStarts(searchValue)
+
+    }
+
+
 
     return (
         <StyledInput className={style.search}>
@@ -24,7 +43,10 @@ const SearchInput = (props) => {
                 className={style.search__input}
                 placeholder="."
                 value={searchValue}
-                onChange={e => setSearchValue(e.target.value)}
+                onChange={e => {
+                    setSearchValue(e.target.value)
+                    debounceNameStarts(e.target.value)
+                }}
             />
 
             <label
@@ -35,6 +57,7 @@ const SearchInput = (props) => {
 
             <FaSearch
                 className={style.search__icon}
+                onClick={() => noDebounceNameStarts()}
             />
         </StyledInput>
     )
