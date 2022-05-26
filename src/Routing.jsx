@@ -6,6 +6,7 @@ import Header from './components/Header/Header/Header';
 import Footer from './components/Footer/Footer';
 import Favorites from "./pages/Favorites";
 import Heroes from './pages/Heroes';
+import Comics from "./pages/Comics";
 
 
 const Routing = () => {
@@ -16,7 +17,8 @@ const Routing = () => {
                 <Routes>
                     <Route exact path='/' element={<Home />} />
                     <Route path='/favorites' element={<Favorites />} />
-                    <Route path="/heroes" element={<Heroes/>} />
+                    <Route path="/heroes" element={<Heroes />} />
+                    <Route path='/comics' element={<Comics />} />
                 </Routes>
             </Container>
             <Footer />

@@ -1,5 +1,5 @@
 import { Types } from "../actions/homePageAction"
-import { returnFavorites, verifyFavorites } from './../helpers/helpers';
+import { returnFavorites, verifyFavorites } from '../helpers/helpers';
 
 const initialState = {
     lastHeroes: [],
