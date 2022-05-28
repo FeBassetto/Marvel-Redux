@@ -1,4 +1,4 @@
-import { select, call, put, all, takeLatest } from 'redux-saga/effects'
+import { select, call, put, takeLatest } from 'redux-saga/effects'
 import { homePageActions } from '../actions/homePageAction'
 
 import apiKey from '../../config/apiKey'

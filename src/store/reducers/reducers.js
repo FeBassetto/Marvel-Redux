@@ -5,6 +5,7 @@ import favoriteReducer from './favoritesReducer';
 import heroesReducer from './heroesReducer';
 import comicsReducer from './comicsReducer';
 import seriesReducer from './seriesReducer';
+import fullHeroReducer from './fullHeroReducer';
 
 export default combineReducers({
     themeReducer,
@@ -12,5 +13,6 @@ export default combineReducers({
     favoriteReducer,
     heroesReducer,
     comicsReducer,
-    seriesReducer
+    seriesReducer,
+    fullHeroReducer
 })

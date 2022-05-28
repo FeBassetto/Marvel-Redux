@@ -8,6 +8,7 @@ import Favorites from "./pages/Favorites";
 import Heroes from './pages/Heroes';
 import Comics from "./pages/Comics";
 import Series from './pages/Series';
+import FullHero from "./pages/FullHero";
 
 
 const Routing = () => {
@@ -18,9 +19,10 @@ const Routing = () => {
                 <Routes>
                     <Route exact path='/' element={<Home />} />
                     <Route path='/favorites' element={<Favorites />} />
-                    <Route path="/heroes" element={<Heroes />} />
+                    <Route path='/heroes' element={<Heroes />} />
                     <Route path='/comics' element={<Comics />} />
                     <Route path='/series' element={<Series />} />
+                    <Route path='/heroes/:heroId' element={<FullHero />} />
                 </Routes>
             </Container>
             <Footer />

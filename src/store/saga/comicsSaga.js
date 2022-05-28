@@ -1,10 +1,10 @@
 import { select, call, put, takeLatest } from 'redux-saga/effects'
-import { comicsActions } from './../actions/comicsActions';
+import { comicsActions } from './../actions/comicsAction';
 
 import apiKey from '../../config/apiKey'
 import api from '../../services/api'
 
-import { Types } from './../actions/comicsActions';
+import { Types } from './../actions/comicsAction';
 
 function* requestComics() {
 
@@ -12,7 +12,7 @@ function* requestComics() {
     const lastFavorites = yield select(state => state.comicsReducer.lastFavorites)
     const favorites = yield select(state => state.favoriteReducer.favoriteItems)
 
-    if (lastFavorites.length !== favorites.length&& favorites.length > 0 && stateComics.length > 0) {
+    if (lastFavorites.length !== favorites.length && stateComics.length > 0) {
         yield put(comicsActions.updateComics(favorites))
         yield put(comicsActions.setLastFavorite(favorites))
         return

@@ -12,7 +12,7 @@ function* requestSeries() {
     const lastFavorites = yield select(state => state.seriesReducer.lastFavorites)
     const favorites = yield select(state => state.favoriteReducer.favoriteItems)
 
-    if (lastFavorites.length !== favorites.length&& favorites.length > 0 && stateSeries.length > 0) {
+    if (lastFavorites.length !== favorites.length && stateSeries.length > 0) {
         yield put(seriesActions.updateSeries(favorites))
         yield put(seriesActions.setLastFavorite(favorites))
         return

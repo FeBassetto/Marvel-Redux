@@ -23,8 +23,7 @@ export default function heroesReducer(state = initialState, action) {
         case Types.ADD_HEROES:
             return {
                 ...state,
-                heroes: returnFavorites(action.payload.heroes, 'hero'),
-                loading: false
+                heroes: returnFavorites(action.payload.heroes, 'hero')
             }
         case Types.UPDATE_HEROES:
             return {

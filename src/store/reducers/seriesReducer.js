@@ -23,8 +23,7 @@ export default function seriesReducer(state = initialState, action) {
         case Types.ADD_SERIES:
             return {
                 ...state,
-                series: returnFavorites(action.payload.series, 'serie'),
-                loading: false
+                series: returnFavorites(action.payload.series, 'serie')
             }
         case Types.UPDATE_SERIES:
             return {

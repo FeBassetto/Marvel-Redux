@@ -1,6 +1,6 @@
 
 import { returnFavorites, verifyFavorites, verifyState } from './../helpers/helpers';
-import { Types } from './../actions/comicsActions';
+import { Types } from './../actions/comicsAction';
 
 
 const initialState = {
@@ -23,8 +23,7 @@ export default function comicsReducer(state = initialState, action) {
         case Types.ADD_COMICS:
             return {
                 ...state,
-                comics: returnFavorites(action.payload.comics, 'comic'),
-                loading: false
+                comics: returnFavorites(action.payload.comics, 'comic')
             }
         case Types.UPDATE_COMICS:
             return {

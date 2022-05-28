@@ -4,7 +4,7 @@ import TitlePage from "../components/TitlePage/TitlePage";
 import SearchInput from './../components/SearchInput/SearchInput';
 import { connect } from "react-redux";
 import { bindActionCreators } from 'redux';
-import { comicsActions } from "../store/actions/comicsActions";
+import { comicsActions } from "../store/actions/comicsAction";
 
 
 const Comics = (props) => {

@@ -17,7 +17,7 @@ const Series = (props) => {
 
     return (
         <>
-            <TitlePage firstText='Pesquise seus' span='Quadrinhos' secondText='favoritos' />
+            <TitlePage firstText='Pesquise suas' span='Séries' secondText='favoritas' />
             <SearchInput
                 placeHolder='Pesquise um quadrinho'
                 setNameStarts={props.setNameStarts}

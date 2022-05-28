@@ -12,6 +12,7 @@ const StyledInput = styled.div`
 const SearchInput = (props) => {
 
     const [searchValue, setSearchValue] = useState('')
+
     let timeout = null;
 
     const activateInput = (e) => {

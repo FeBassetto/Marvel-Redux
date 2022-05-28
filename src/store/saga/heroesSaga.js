@@ -12,7 +12,7 @@ function* requestHeroes() {
     const lastFavorites = yield select(state => state.heroesReducer.lastFavorites)
     const favorites = yield select(state => state.favoriteReducer.favoriteItems)
 
-    if (lastFavorites.length !== favorites.length&& favorites.length > 0 && stateHeroes.length > 0) {
+    if (lastFavorites.length !== favorites.length && stateHeroes.length > 0) {
         yield put(heroesActions.updateHeroes(favorites))
         yield put(heroesActions.setLastFavorite(favorites))
         return

@@ -14,7 +14,6 @@ export const loadState = () => {
 export const saveState = state => {
     try {
         const localStorageState = JSON.stringify(state)
-        console.log(state)
         localStorage.setItem('favoriteReducer', localStorageState)
     } catch (err) {
         console.log('Nao foi possivel salvar o estado', err);
