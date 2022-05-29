@@ -38,3 +38,7 @@ Abra [http://localhost:3000](http://localhost:3000) para vizualizar no browser.
 ### `npm run build` ou `yarn run build`
 
 Cria a pasta `build` onde ficará o projeto pronto para produção.\
+
+## Link para Deploy no GitHub Pages
+
+Link: [https://febassetto.github.io/Marvel-Redux/](https://febassetto.github.io/Marvel-Redux/)
