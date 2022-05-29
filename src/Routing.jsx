@@ -15,7 +15,7 @@ import FullSeries from './pages/FullSerie';
 
 const Routing = () => {
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <Header />
             <Container>
                 <Routes>
