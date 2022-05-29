@@ -39,7 +39,7 @@ const fullPageContent = ({ content, removeFavorite, addFavorite }) => {
                 <h1 className={style.bottom__name}>{content.name ? content.name : content.title}</h1>
                 <h2 className={style.bottom__description}>{content.description ? content.description : 'Sem descrição'}</h2>
                 <div className={style.bottom__container}>
-                    <h1 className={style.bottom__lastModified}>Última modificação há {dayDiff === 1 ? `${dayDiff} dia` : `${dayDiff} dias`}</h1>
+                    <h1 className={style.bottom__lastModified}>Última modificação há {!isNaN(dayDiff) ? dayDiff === 1 ? `${dayDiff} dia` : `${dayDiff} dias` : '(tempo indeterminado)'}</h1>
                     <h2>Eventos: {content.events.available}</h2>
                     <h2>Histórias: {content.stories.available}</h2>
                     {content.comics && (

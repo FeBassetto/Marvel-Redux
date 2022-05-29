@@ -3,27 +3,29 @@ import { useParams } from "react-router-dom";
 import TitlePage from '../components/TitlePage/TitlePage';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fullHeroActions } from './../store/actions/fullHeroAction';
+import { fullSerieActions } from './../store/actions/fullSerieAction';
 import FullPageContent from './../components/FullPageContent/FullPageContent';
 import Loading from './../components/Loading/Loading';
 
-const FullHero = (props) => {
+const FullSeries = (props) => {
 
-    const { heroId } = useParams()
+    const { serieId } = useParams()
 
 
     useEffect(() => {
-        props.requestFullHero(heroId)
-    }, [heroId, props.favorites])
+        props.requestFullSeries(serieId)
+    }, [serieId, props.favorites])
 
-    const hero = props.hero[0]
+    const serie = props.serie[0]
 
     return (
         <>
             {!props.loading && (
                 <>
-                    <TitlePage firstText='Tudo sobre' span={hero.name} />
-                    <FullPageContent content={hero} />
+                    <TitlePage 
+                    firstText='Tudo sobre'
+                     span={`${serie.title.split(' ')[0]} ${serie.title.split(' ')[1]} ${serie.title.split(' ')[2]}`} />
+                    <FullPageContent content={serie} />
                 </>
             )
             }
@@ -37,12 +39,12 @@ const FullHero = (props) => {
     )
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators(fullHeroActions, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators(fullSerieActions, dispatch)
 
 const mapStateToProps = state => ({
-    hero: state.fullHeroReducer.hero,
-    loading: state.fullHeroReducer.loading,
+    serie: state.fullSerieReducer.serie,
+    loading: state.fullSerieReducer.loading,
     favorites: state.favoriteReducer.favoriteItems
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(FullHero)
+export default connect(mapStateToProps, mapDispatchToProps)(FullSeries)

@@ -5,6 +5,8 @@ import heroesSaga from './heroesSaga'
 import comicsSaga from './comicsSaga'
 import seriesSaga from './seriesSaga'
 import heroSaga from './fullHeroSaga'
+import comicSaga from './fullComicSaga'
+import serieSaga from './fullSerieSaga'
 
 export default function* saga(){
     yield all([
@@ -12,6 +14,8 @@ export default function* saga(){
         fork(heroesSaga),
         fork(comicsSaga),
         fork(seriesSaga),
-        fork(heroSaga)
+        fork(heroSaga),
+        fork(comicSaga),
+        fork(serieSaga)
     ])
 }
