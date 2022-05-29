@@ -21,6 +21,7 @@ const Comics = (props) => {
             <SearchInput
                 placeHolder='Pesquise um quadrinho'
                 setNameStarts={props.setNameStarts}
+                searchValue={props.search}
             />
             <DataContent
                 filter='Título'

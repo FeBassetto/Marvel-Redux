@@ -21,6 +21,7 @@ const Heroes = (props) => {
             <SearchInput
                 placeHolder='Pesquise um herói'
                 setNameStarts={props.setNameStarts}
+                searchValue={props.search}
             />
             <DataContent
                 filter='Nome'
