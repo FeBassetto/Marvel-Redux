@@ -27,7 +27,7 @@ const SearchInput = (props) => {
 
         timeout = setTimeout(function () {
             props.setNameStarts(value)
-        }, 2000);
+        }, 3000);
 
     }
 
