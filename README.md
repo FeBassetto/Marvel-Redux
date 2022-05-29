@@ -1,5 +1,10 @@
 # Projeto MARVEL HEROES
 
+## Sobre o projeto
+
+<p>Projeto desenvolvido em react utilizando Redux, 
+com objetivo demonstrar personagens, quadrinhos e séries da Marvel</p>
+
 ## Depêndencias
 
 <ul>
@@ -15,3 +20,21 @@
     <li>"reselect": "^4.1.5"</li>
     <li>"styled-components": "^5.3.5"</li>
 </ul>
+
+## Scripts disponíveis
+
+No diretório do projeto, utilize:
+
+### `npm install` ou `yarn install`
+
+Para instalar as `dependências` do projeto
+
+### `npm start` ou `yarn start`
+
+Rodar o app no modo de desenvolvimento.\
+Abra [http://localhost:3000](http://localhost:3000) para vizualizar no browser.
+
+
+### `npm run build` ou `yarn run build`
+
+Cria a pasta `build` onde ficará o projeto pronto para produção.\
