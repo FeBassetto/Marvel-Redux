@@ -32,21 +32,28 @@ function* requestFullComic({ payload }) {
     }
 
 
+    try {
 
-    const fullComic = yield call(
-        api.get,
-        '/comics',
-        {
-            params: {
-                ...apiKey,
-                limit: 1,
-                id: id
+        const fullComic = yield call(
+            api.get,
+            '/comics',
+            {
+                params: {
+                    ...apiKey,
+                    limit: 1,
+                    id: id
+                }
             }
-        }
-    )
+        )
 
-    yield put(fullComicActions.addFullComic(fullComic.data.data.results))
-    yield put(fullComicActions.updateFullComic(favorites))
+        yield put(fullComicActions.addFullComic(fullComic.data.data.results))
+        yield put(fullComicActions.updateFullComic(favorites))
+
+    }catch(err){
+
+        yield put(fullComicActions.setError(true))
+
+    }
 
 }
 

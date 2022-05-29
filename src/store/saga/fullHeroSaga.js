@@ -33,20 +33,27 @@ function* requestFullHero({ payload }) {
 
 
 
-    const fullHero = yield call(
-        api.get,
-        '/characters',
-        {
-            params: {
-                ...apiKey,
-                limit: 1,
-                id: id
+    try {
+        const fullHero = yield call(
+            api.get,
+            '/characters',
+            {
+                params: {
+                    ...apiKey,
+                    limit: 1,
+                    id: id
+                }
             }
-        }
-    )
+        )
 
-    yield put(fullHeroActions.addFullHero(fullHero.data.data.results))
-    yield put(fullHeroActions.updateFullHero(favorites))
+        yield put(fullHeroActions.addFullHero(fullHero.data.data.results))
+        yield put(fullHeroActions.updateFullHero(favorites))
+
+    } catch (err) {
+
+        yield put(fullHeroActions.setError(true))
+
+    }
 
 }
 

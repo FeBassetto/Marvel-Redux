@@ -24,8 +24,6 @@ const FavoriteBoxItems = (props) => {
         <>
             {props.favorites.length > 0 && (
                 props.favorites.map(favorite => (
-                    <Link to={`/${link[favorite.type]}/${favorite.id}`}>
-                    {console.log(favorite.id)}
                         <div className={style.favoriteBox} key={favorite.id}>
                             <img
                                 src={`${favorite.thumbnail.path}.${favorite.thumbnail.extension}`}
@@ -40,7 +38,6 @@ const FavoriteBoxItems = (props) => {
                                 </div>
                             </div>
                         </div>
-                    </Link>
                 ))
             )}
         </>

@@ -5,7 +5,8 @@ import { returnFavorites, verifyFavorites } from '../helpers/helpers';
 
 const initialState = {
     hero: [],
-    loading: true
+    loading: true,
+    error: false
 }
 
 
@@ -19,7 +20,8 @@ export default function fullHeroReducer(state = initialState, action) {
         case Types.UPDATE_FULLHERO:
             return {
                 hero: verifyFavorites(state.hero, action.payload.favorites),
-                loading: false
+                loading: false,
+                error: false
             }
 
         case Types.LOADING_FULLHERO:
@@ -27,6 +29,13 @@ export default function fullHeroReducer(state = initialState, action) {
                 ...state,
                 loading: action.payload.loading
             }
+
+            case Types.ERROR_FULLHERO:
+                return{
+                    ...state,
+                    error: action.payload.error,
+                    loading:false
+                }
         default:
             return state
     }

@@ -5,7 +5,8 @@ import { returnFavorites, verifyFavorites } from '../helpers/helpers';
 
 const initialState = {
     comic: [],
-    loading: true
+    loading: true,
+    error: false
 }
 
 
@@ -19,7 +20,8 @@ export default function fullComicReducer(state = initialState, action) {
         case Types.UPDATE_FULLCOMIC:
             return {
                 comic: verifyFavorites(state.comic, action.payload.favorites),
-                loading: false
+                loading: false,
+                error: false
             }
 
         case Types.LOADING_FULLCOMIC:
@@ -27,6 +29,12 @@ export default function fullComicReducer(state = initialState, action) {
                 ...state,
                 loading: action.payload.loading
             }
+            case Types.ERROR_FULLCOMIC:
+                return{
+                    ...state,
+                    error: action.payload.error,
+                    loading:false
+                }
         default:
             return state
     }

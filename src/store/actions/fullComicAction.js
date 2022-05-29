@@ -3,6 +3,8 @@ export const Types = {
     UPDATE_FULLCOMIC: 'fullComic/UPDATE_FULLCOMIC',
     REQUEST_FULLCOMIC: 'fullComic/REQUEST_FULLCOMIC',
     LOADING_FULLCOMIC: 'fullComic/LOADING_FULLCOMIC',
+    ERROR_FULLCOMIC: 'fullComic/ERROR_FULLCOMIC',
+
 }
 
 
@@ -34,5 +36,12 @@ export const fullComicActions = {
             loading
         }
     }),
+
+    setError: error => ({
+        type: Types.ERROR_FULLCOMIC,
+        payload: {
+            error
+        }
+    })
 
 }

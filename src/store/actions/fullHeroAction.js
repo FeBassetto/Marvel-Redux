@@ -3,6 +3,7 @@ export const Types = {
     UPDATE_FULLHERO: 'fullHero/UPDATE_FULLHERO',
     REQUEST_FULLHERO: 'fullHero/REQUEST_FULLHERO',
     LOADING_FULLHERO: 'fullHero/LOADING_FULLHERO',
+    ERROR_FULLHERO: 'fullHero/ERROR_FULLHERO',
 }
 
 
@@ -34,5 +35,12 @@ export const fullHeroActions = {
             loading
         }
     }),
+
+    setError: error => ({
+        type: Types.ERROR_FULLHERO,
+        payload: {
+            error
+        }
+    })
 
 }

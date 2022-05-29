@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import { fullComicActions } from './../store/actions/fullComicAction';
 import FullPageContent from './../components/FullPageContent/FullPageContent';
 import Loading from './../components/Loading/Loading';
+import Button from './../components/Button/Button';
 
 const FullComics = (props) => {
 
@@ -20,15 +21,22 @@ const FullComics = (props) => {
 
     return (
         <>
-            {!props.loading && (
+            {!props.loading && !props.error && (
                 <>
-                    <TitlePage 
-                    firstText='Tudo sobre'
-                     span={`${comic.title.split(' ')[0]} ${comic.title.split(' ')[1]} ${comic.title.split(' ')[2]}`} />
+                    <TitlePage
+                        firstText='Tudo sobre'
+                        span={`${comic.title.split(' ')[0]} ${comic.title.split(' ')[1]} ${comic.title.split(' ')[2]}`} />
                     <FullPageContent content={comic} />
                 </>
             )
             }
+
+            {props.error && (
+                <>
+                    <TitlePage firstText='OPS... Não conseguimos encontrar este' span='quadrinho' />
+                    <Button text='Procure outro quadrinho' link='/comics' />
+                </>
+            )}
 
             {
                 props.loading && (
@@ -44,6 +52,7 @@ const mapDispatchToProps = dispatch => bindActionCreators(fullComicActions, disp
 const mapStateToProps = state => ({
     comic: state.fullComicReducer.comic,
     loading: state.fullComicReducer.loading,
+    error: state.fullComicReducer.error,
     favorites: state.favoriteReducer.favoriteItems
 })
 
