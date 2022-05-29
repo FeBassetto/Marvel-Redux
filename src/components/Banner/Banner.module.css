@@ -7,22 +7,22 @@
     position: relative;
 }
 
-.banner > *{
+.banner>* {
     height: 100%;
 }
 
-.banner img{
+.banner img {
     height: 40vw;
 
     object-fit: cover;
 }
 
-.banner__title{
+.banner__title {
     font-size: 3vw;
     font-family: RobotoBold;
 }
 
-.banner__subTitle{
+.banner__subTitle {
     font-size: 2vw;
     font-family: InterLight;
 }
@@ -40,7 +40,7 @@
 
 .banner__link button {
     width: 36vw;
-    padding: 1rem;
+    padding: 2vw;
 
     box-sizing: border-box;
 
@@ -67,20 +67,38 @@
 
 }
 
-@media screen and (max-width:1000px){
-    .banner{
+@media screen and (max-width:1000px) {
+    .banner {
         width: 95%;
-        height: 60vw;
-    }
-    .banner__link{
-        left: calc(50% - 40vw);
+        height: 70vw;
     }
 
-    .banner__link button{
+    .banner img {
+        height: 70vw;
+
+        object-fit: cover;
+    }
+
+    .banner__link {
+        left: calc(50% - 40vw);
+        bottom: 4vw;
+    }
+
+    .banner__link button {
         width: 80vw;
 
         font-size: 3.5vw;
 
         border-width: 1px;
+    }
+
+    .banner__title {
+        font-size: 6vw;
+        font-family: RobotoBold;
+    }
+
+    .banner__subTitle {
+        font-size: 2.5vw;
+        font-family: InterLight;
     }
 }
