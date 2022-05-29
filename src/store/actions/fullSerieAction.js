@@ -3,6 +3,7 @@ export const Types = {
     UPDATE_FULLSERIE: 'fullSerie/UPDATE_FULLSERIE',
     REQUEST_FULLSERIE: 'fullSerie/REQUEST_FULLSERIE',
     LOADING_FULLSERIE: 'fullSerie/LOADING_FULLSERIE',
+    ERROR_FULLSERIE: 'fullSerie/ERROR_FULLSERIE',
 }
 
 
@@ -34,5 +35,12 @@ export const fullSerieActions = {
             loading
         }
     }),
+
+    setError: error => ({
+        type: Types.ERROR_FULLSERIE,
+        payload: {
+            error
+        }
+    })
 
 }

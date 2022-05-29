@@ -6,6 +6,7 @@ import { bindActionCreators } from 'redux';
 import { fullSerieActions } from './../store/actions/fullSerieAction';
 import FullPageContent from './../components/FullPageContent/FullPageContent';
 import Loading from './../components/Loading/Loading';
+import Button from './../components/Button/Button';
 
 const FullSeries = (props) => {
 
@@ -20,7 +21,7 @@ const FullSeries = (props) => {
 
     return (
         <>
-            {!props.loading && (
+            {!props.loading && !props.error && (
                 <>
                     <TitlePage 
                     firstText='Tudo sobre'
@@ -29,6 +30,13 @@ const FullSeries = (props) => {
                 </>
             )
             }
+
+            {props.error && (
+                <>
+                    <TitlePage firstText='OPS... Não conseguimos encontrar esta' span='série' />
+                    <Button text='Procure outra série' link='/series' />
+                </>
+            )}
 
             {
                 props.loading && (
@@ -44,6 +52,7 @@ const mapDispatchToProps = dispatch => bindActionCreators(fullSerieActions, disp
 const mapStateToProps = state => ({
     serie: state.fullSerieReducer.serie,
     loading: state.fullSerieReducer.loading,
+    error: state.fullSerieReducer.error,
     favorites: state.favoriteReducer.favoriteItems
 })
 

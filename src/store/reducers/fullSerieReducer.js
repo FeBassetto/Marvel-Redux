@@ -5,7 +5,8 @@ import { returnFavorites, verifyFavorites } from '../helpers/helpers';
 
 const initialState = {
     serie: [],
-    loading: true
+    loading: true,
+    error: false
 }
 
 
@@ -19,7 +20,8 @@ export default function fullSerieReducer(state = initialState, action) {
         case Types.UPDATE_FULLSERIE:
             return {
                 serie: verifyFavorites(state.serie, action.payload.favorites),
-                loading: false
+                loading: false,
+                error: false
             }
 
         case Types.LOADING_FULLSERIE:
@@ -27,6 +29,12 @@ export default function fullSerieReducer(state = initialState, action) {
                 ...state,
                 loading: action.payload.loading
             }
+            case Types.ERROR_FULLSERIE:
+                return{
+                    ...state,
+                    error: action.payload.error,
+                    loading:false
+                }
         default:
             return state
     }

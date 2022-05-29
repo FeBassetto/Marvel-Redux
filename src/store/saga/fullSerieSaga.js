@@ -33,20 +33,27 @@ function* requestFullSerie({ payload }) {
 
 
 
-    const fullSerie = yield call(
-        api.get,
-        '/series',
-        {
-            params: {
-                ...apiKey,
-                limit: 1,
-                id: id
+    try{
+        const fullSerie = yield call(
+            api.get,
+            '/series',
+            {
+                params: {
+                    ...apiKey,
+                    limit: 1,
+                    id: id
+                }
             }
-        }
-    )
+        )
+    
+        yield put(fullSerieActions.addFullSerie(fullSerie.data.data.results))
+        yield put(fullSerieActions.updateFullSerie(favorites))
 
-    yield put(fullSerieActions.addFullSerie(fullSerie.data.data.results))
-    yield put(fullSerieActions.updateFullSerie(favorites))
+    }catch(err){
+
+        yield put(fullSerieActions.setError(true))
+
+    }
 
 }
 
