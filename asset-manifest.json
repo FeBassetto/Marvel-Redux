@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.ab3a7066.css",
-    "main.js": "/static/js/main.a2aa5884.js",
-    "static/media/Inter-Bold.ttf": "/static/media/Inter-Bold.a73db89c43e44ca8f5e0.ttf",
-    "static/media/Inter-Medium.ttf": "/static/media/Inter-Medium.e7231ba33760832432b8.ttf",
-    "static/media/Inter-Light.ttf": "/static/media/Inter-Light.58a136ec3193fa8a63e5.ttf",
-    "static/media/bannerImage.png": "/static/media/bannerImage.a8c34b7a0bc995dbf677.png",
-    "static/media/Roboto-Medium.ttf": "/static/media/Roboto-Medium.7429a63c09f79a1760b0.ttf",
-    "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.a8d6ac03c7b96b7acb62.ttf",
-    "static/media/Roboto-Black.ttf": "/static/media/Roboto-Black.2a4285847db4a9acb97f.ttf",
-    "static/media/Roboto-Bold.ttf": "/static/media/Roboto-Bold.75371f53f06181df75f1.ttf",
-    "static/media/marvelLogo.jpeg": "/static/media/marvelLogo.300aeba50273e78572c7.jpeg",
-    "index.html": "/index.html",
-    "main.ab3a7066.css.map": "/static/css/main.ab3a7066.css.map",
-    "main.a2aa5884.js.map": "/static/js/main.a2aa5884.js.map"
+    "main.css": "/Marvel-Redux/static/css/main.ab3a7066.css",
+    "main.js": "/Marvel-Redux/static/js/main.47d06280.js",
+    "static/media/Inter-Bold.ttf": "/Marvel-Redux/static/media/Inter-Bold.a73db89c43e44ca8f5e0.ttf",
+    "static/media/Inter-Medium.ttf": "/Marvel-Redux/static/media/Inter-Medium.e7231ba33760832432b8.ttf",
+    "static/media/Inter-Light.ttf": "/Marvel-Redux/static/media/Inter-Light.58a136ec3193fa8a63e5.ttf",
+    "static/media/bannerImage.png": "/Marvel-Redux/static/media/bannerImage.a8c34b7a0bc995dbf677.png",
+    "static/media/Roboto-Medium.ttf": "/Marvel-Redux/static/media/Roboto-Medium.7429a63c09f79a1760b0.ttf",
+    "static/media/Roboto-Regular.ttf": "/Marvel-Redux/static/media/Roboto-Regular.a8d6ac03c7b96b7acb62.ttf",
+    "static/media/Roboto-Black.ttf": "/Marvel-Redux/static/media/Roboto-Black.2a4285847db4a9acb97f.ttf",
+    "static/media/Roboto-Bold.ttf": "/Marvel-Redux/static/media/Roboto-Bold.75371f53f06181df75f1.ttf",
+    "static/media/marvelLogo.jpeg": "/Marvel-Redux/static/media/marvelLogo.300aeba50273e78572c7.jpeg",
+    "index.html": "/Marvel-Redux/index.html",
+    "main.ab3a7066.css.map": "/Marvel-Redux/static/css/main.ab3a7066.css.map",
+    "main.47d06280.js.map": "/Marvel-Redux/static/js/main.47d06280.js.map"
   },
   "entrypoints": [
     "static/css/main.ab3a7066.css",
-    "static/js/main.a2aa5884.js"
+    "static/js/main.47d06280.js"
   ]
 }
