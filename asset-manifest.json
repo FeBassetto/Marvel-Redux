@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Marvel-Redux/static/css/main.ab3a7066.css",
-    "main.js": "/Marvel-Redux/static/js/main.47d06280.js",
+    "main.js": "/Marvel-Redux/static/js/main.2743d175.js",
     "static/media/Inter-Bold.ttf": "/Marvel-Redux/static/media/Inter-Bold.a73db89c43e44ca8f5e0.ttf",
     "static/media/Inter-Medium.ttf": "/Marvel-Redux/static/media/Inter-Medium.e7231ba33760832432b8.ttf",
     "static/media/Inter-Light.ttf": "/Marvel-Redux/static/media/Inter-Light.58a136ec3193fa8a63e5.ttf",
@@ -13,10 +13,10 @@
     "static/media/marvelLogo.jpeg": "/Marvel-Redux/static/media/marvelLogo.300aeba50273e78572c7.jpeg",
     "index.html": "/Marvel-Redux/index.html",
     "main.ab3a7066.css.map": "/Marvel-Redux/static/css/main.ab3a7066.css.map",
-    "main.47d06280.js.map": "/Marvel-Redux/static/js/main.47d06280.js.map"
+    "main.2743d175.js.map": "/Marvel-Redux/static/js/main.2743d175.js.map"
   },
   "entrypoints": [
     "static/css/main.ab3a7066.css",
-    "static/js/main.47d06280.js"
+    "static/js/main.2743d175.js"
   ]
 }
