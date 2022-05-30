@@ -43,13 +43,13 @@ const fullPageContent = ({ content, removeFavorite, addFavorite }) => {
                     <h2>Eventos: {content.events.available}</h2>
                     <h2>Histórias: {content.stories.available}</h2>
                     {content.comics && (
-                        <h2>Quadrinhos: {content.comics.available}</h2>
+                        <h2>Quadrinhos: {content.comics.available > 0 ? content.comics.available : 0}</h2>
                     )}
                     {content.series && (
-                        <h2>Séries: {content.series.available}</h2>
+                        <h2>Séries: {content.series.available > 0 ? content.series.available : 0}</h2>
                     )}
                     {content.characters && (
-                        <h2>Personagens: {content.characters.available}</h2>
+                        <h2>Personagens: {content.characters.available > 0 ? content.characters.available : 0}</h2>
                     )}
                 </div>
             </div>
