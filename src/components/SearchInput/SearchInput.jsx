@@ -11,8 +11,6 @@ const StyledInput = styled.div`
 
 const SearchInput = (props) => {
 
-    console.log(props.searchValue)
-
     const [searchValue, setSearchValue] = useState(props.searchValue)
 
     let timeout = null;
