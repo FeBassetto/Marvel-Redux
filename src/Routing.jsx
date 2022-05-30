@@ -11,6 +11,7 @@ import Series from './pages/Series';
 import FullHero from "./pages/FullHero";
 import FullComics from "./pages/FullComics";
 import FullSeries from './pages/FullSerie';
+import NotFound from './pages/NotFound';
 
 
 const Routing = () => {
@@ -27,6 +28,7 @@ const Routing = () => {
                     <Route path='/heroes/:heroId' element={<FullHero />} />
                     <Route path='/comics/:comicId' element={<FullComics />} />
                     <Route path='/series/:serieId' element={<FullSeries />} />
+                    <Route path='*' element={<NotFound />} />
                 </Routes>
             </Container>
             <Footer />
